@@ -134,29 +134,31 @@ function incrementer(arg) {
 const bookList = ["The Hound of the Baskervilles", "On The Electrodynamics of Moving Bodies", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae"];
 
 // Change code below this line
-function add(bookName) {
-  let copyBookList = [];
-  copyBookList.push("A Brief History of Time");
-  let array3 = bookList.concat(copyBookList);
-  console.log(array3);
-  return array3;
+function add(list, bookName) {
+  let copyBookList = [...list];
+  copyBookList.push(bookName);
+  console.log(copyBookList);
+  return copyBookList;
   
   // Change code above this line
 }
 
 // Change code below this line
-function remove(bookName) {
+function remove(list, bookName) {
   const book_index = bookList.indexOf(bookName);
   if (book_index >= 0) {
-    let copyBookRemove = [];
-    for (let book in bookList){
-      copyBookRemove.push(book);
-    }
-    
-    bookList.splice(book_index, 1);
-    return bookList;
-
+    let copyBookRemove = [...list];
+    //for (let i = 0; i<bookList.length;i++){
+      //copyBookRemove.push(bookList[i]);
+    //}
+    copyBookRemove.splice(copyBookRemove.indexOf(bookName),1);
+    console.log(copyBookRemove);
+    return copyBookRemove;
     // Change code above this line
     }
 }
-remove("On The Electrodynamics of Moving Bodies")
+
+add(bookList, "A Brief History of Time");
+remove(bookList, 'On The Electrodynamics of Moving Bodies');
+remove(add(bookList, 'A Brief History of Time'), 'On The Electrodynamics of Moving Bodies');
+//----------------------------------------------
