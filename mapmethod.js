@@ -285,3 +285,19 @@ const watchList2 = [
   
   console.log(filteredList);
 //----------------------------------------------
+Array.prototype.myFilter = function(callback) {
+    const newArray = [];
+    // Only change code below this line
+    let copyArr = []
+    for (let i  = 0; i<this.length; i++){
+      if (callback(this[i], i, this)== true){
+        newArray.push(this[i]);
+      }
+    }
+    // Only change code above this line
+    console.log(newArray);
+    return newArray;
+  };
+  
+  [1, 1, 2, 5, 2].myFilter((element, index, array) => array.indexOf(element) === index);
+//----------------------------------------------
