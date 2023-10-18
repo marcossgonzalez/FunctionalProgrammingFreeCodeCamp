@@ -472,17 +472,26 @@ alphabeticalOrder(["a", "d", "c", "a", "z", "g"]);
 const globalArray = [5, 6, 3, 2, 9];
 
 function nonMutatingSort(arr) {
-  // Only change code below this line
-  let array = [];
-  array = array.concat(arr);
-  array = array.sort(function (a, b) {
-    return a - b;
-  });
-  console.log(array);
-  return array;
+    // Only change code below this line
+    let array = [];
+    array = array.concat(arr);
+    array = array.sort(function (a, b) {
+        return a - b;
+    });
+    console.log(array);
+    return array;
 
-  // Only change code above this line
+    // Only change code above this line
 }
 
 nonMutatingSort([140000, 104, 99])
+//----------------------------------------------
+function splitify(str) {
+    // Only change code below this line
+    return str.split(/\W/gi);
+
+    // Only change code above this line
+}
+
+splitify("Hello World,I-am code");
 //----------------------------------------------
