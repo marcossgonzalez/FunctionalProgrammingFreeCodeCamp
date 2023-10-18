@@ -519,3 +519,16 @@ function urlSlug(title) {
 // Only change code above this line
 urlSlug("A Mind Needs Books Like A Sword Needs A Whetstone");
 //----------------------------------------------
+function checkPositive(arr) {
+    // Only change code below this line
+    let array = arr;
+    return array.every(function (a) {
+        return a > 0;
+    }
+    );
+
+    // Only change code above this line
+}
+
+checkPositive([1, 2, 3, -4, 5]);
+//----------------------------------------------
