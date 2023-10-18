@@ -495,3 +495,27 @@ function splitify(str) {
 
 splitify("Hello World,I-am code");
 //----------------------------------------------
+function sentensify(str) {
+    // Only change code below this line
+    let array = str.split(/\W/gi);
+    console.log(array);
+    array = array.join(" ");
+    console.log(array);
+    return array;
+    // Only change code above this line
+}
+
+sentensify("May-the-force-be-with-you");
+//----------------------------------------------
+// Only change code below this line
+function urlSlug(title) {
+    let array = [];
+    array = array.concat(title);
+    array = array.join("-");
+    array = array.split(" ").filter(substr => substr !== "").join("-").toLowerCase()
+    console.log(array)
+    return array;
+}
+// Only change code above this line
+urlSlug("A Mind Needs Books Like A Sword Needs A Whetstone");
+//----------------------------------------------
