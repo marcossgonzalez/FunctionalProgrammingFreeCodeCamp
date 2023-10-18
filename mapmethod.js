@@ -460,3 +460,29 @@ const squareList = arr => {
 const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
 console.log(squaredIntegers);
 //----------------------------------------------
+function alphabeticalOrder(arr) {
+    // Only change code below this line
+
+    return arr.sort();
+    // Only change code above this line
+}
+
+alphabeticalOrder(["a", "d", "c", "a", "z", "g"]);
+//----------------------------------------------
+const globalArray = [5, 6, 3, 2, 9];
+
+function nonMutatingSort(arr) {
+  // Only change code below this line
+  let array = [];
+  array = array.concat(arr);
+  array = array.sort(function (a, b) {
+    return a - b;
+  });
+  console.log(array);
+  return array;
+
+  // Only change code above this line
+}
+
+nonMutatingSort([140000, 104, 99])
+//----------------------------------------------
