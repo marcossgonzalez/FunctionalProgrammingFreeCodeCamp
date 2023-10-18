@@ -162,7 +162,7 @@ Array.prototype.myMap = function (callback) {
 [1, 1, 2, 5, 2].myMap((element, index, array) => array[index + 1] || array[0])
 //----------------------------------------------
 // The global variable
-const watchList = [
+const watchList2 = [
     {
       "Title": "Inception",
       "Year": "2010",
@@ -277,7 +277,7 @@ const watchList = [
   
   // Only change code below this line
   
-  const filteredList = watchList.filter(({imdbRating}) => imdbRating >= 8)
+  const filteredList = watchList2.filter(({imdbRating}) => imdbRating >= 8)
   .map(movie => ({title:movie["Title"], rating:movie["imdbRating"]}));
   
   
