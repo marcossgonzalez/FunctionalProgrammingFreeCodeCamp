@@ -436,3 +436,27 @@ function getRating(watchList) {
 
 console.log(getRating(watchList));
 //----------------------------------------------
+const squareList = arr => {
+    // Only change code below this line
+    let array = arr.map(arr => arr);
+    console.log(array);
+    array = array.filter(array => Number.isInteger(array) && array > 0);
+    array = array.map(array => array * array);
+    console.log(array);
+    //for (let i = 0; i<arr.length; i++){
+    //if (Number.isInteger(arr[i])){
+    //let number = arr[i];
+    //if(number > 0){
+    //number = arr[i]*arr[i];
+    //array.push(number);
+    //}
+    //}
+    //} 
+    //console.log(array)
+    return array;
+    // Only change code above this line
+};
+
+const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
+console.log(squaredIntegers);
+//----------------------------------------------
